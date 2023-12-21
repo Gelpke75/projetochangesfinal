@@ -96,5 +96,26 @@
       "password": "111",
       "id": 30
     }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "titulo": "Título do Post 1",
+      "descricao": "Descrição do Post 1",
+      "imagemUrl": "link_para_imagem_1.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Título do Post 2",
+      "descricao": "Descrição do Post 2",
+      "imagemUrl": "link_para_imagem_2.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Título do Post 3",
+      "descricao": "Descrição do Post 3",
+      "imagemUrl": "link_para_imagem_3.jpg"
+    }
+   
   ]
 }

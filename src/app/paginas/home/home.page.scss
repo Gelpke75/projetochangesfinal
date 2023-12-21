@@ -1,8 +1,23 @@
-ion-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
+/* Estilização para a página Home */
+*{
+    --ion-background-color: black;
 }
-
-.scroll-content {
-    overflow-x: hidden !important;
+ion-header {
+    ion-toolbar {
+      ion-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
   }
+  
+  ion-content {
+    ion-list {
+      ion-item {
+        font-size: 16px;
+        padding: 12px;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+  

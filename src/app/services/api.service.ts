@@ -10,6 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ApiService {
   private apiUrl = 'http://localhost:3000/login'; // Altere para o URL correto do seu backend
   private loginUrl = 'http://localhost:3000/login';
+  private Url = 'http://localhost:3000';
   private products = new BehaviorSubject<any[]>([]);
   enableNotifications: boolean = false;
   selectedLanguage: string = 'en';
@@ -81,6 +82,10 @@ excluirLogin(id: number): Observable<any> {
 }
 
 
+
+getPosts(): Observable<any[]> {
+  return this.http.get<any[]>(`${this.Url}/posts`);
+}
 
 }
   

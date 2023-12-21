@@ -1,7 +1,5 @@
-// home.page.ts
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
-
 
 @Component({
   selector: 'app-home',
@@ -9,29 +7,18 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
   posts: any[] = [];
-  
-  // Declare a propriedade newComment
-  newComment = ''; // Variável para armazenar o novo comentário
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService :ApiService) {}
 
-  ngOnInit() {}
-
-  doRefresh(event: { target: { complete: () => void; }; }) {
-    setTimeout(() => {
-      console.log('Operação de atualização completa');
-      event.target.complete();
-    }, 2000);
+  ngOnInit() {
+    this.apiService.getPosts().subscribe(
+      (data) => {
+        this.posts = data;
+      },
+      (error) => {
+        console.error('Erro ao buscar os posts:', error);
+      }
+    );
   }
-
-  addComment(post: any) {
-    // Adicionar lógica para adicionar um comentário ao post
-    // Aqui você pode chamar o serviço de autenticação para adicionar um comentário com o usuário autenticado
-  }
-
-
-
-  
 }
