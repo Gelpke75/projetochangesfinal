@@ -1,0 +1,94 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "adm": false,
+      "username": "admin",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "adm": false,
+      "username": "bb",
+      "password": "111"
+    },
+    {
+      "id": 3,
+      "adm": true,
+      "username": "superior",
+      "password": "topsecret"
+    },
+    {
+      "id": 4,
+      "username": "superior",
+      "adm": false,
+      "password": "123"
+    },
+    {
+      "id": 5,
+      "adm": true,
+      "username": "petit",
+      "password": "petit"
+    },
+    {
+      "username": "patrick",
+      "adm": false,
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "username": "bruno",
+      "adm": false,
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "username": "brunaozao",
+      "adm": false,
+      "password": "1234",
+      "id": 12
+    },
+    {
+      "username": "gabrielzao",
+      "adm": false,
+      "password": "1234",
+      "id": 13
+    },
+    {
+      "username": "petitzin",
+      "adm": false,
+      "password": "1234",
+      "id": 23
+    },
+    {
+      "username": "petitzinzao",
+      "adm": false,
+      "password": "1234",
+      "id": 24
+    },
+    {
+      "username": "petizn",
+      "adm": false,
+      "password": "1234",
+      "id": 25
+    },
+    {
+      "username": "alo",
+      "adm": false,
+      "password": "1234",
+      "id": 26
+    },
+    {
+      "username": "bebe",
+      "adm": false,
+      "password": "123",
+      "id": 27
+    },
+    {
+      "username": "narutouzukraq",
+      "adm": "false",
+      "password": "123",
+      "id": 28
+    }
+  ]
+}

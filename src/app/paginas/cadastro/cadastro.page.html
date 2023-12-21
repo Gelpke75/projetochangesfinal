@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+<ion-content *ngIf="hideTabs">
+
+  <div class="image-container">
+    <img src="" class="top-image" id="animated-img">
+  
+  </div>
+
+  <ion-item class="um"  color="translucent"> 
+    <ion-label class ="loginsenha" position="floating">Nome de Usuário</ion-label>
+    <ion-input type="text" [(ngModel)]="login.username"></ion-input>
+  </ion-item>
+  <ion-item class="dois"  color="info">
+    <ion-label class ="loginsenha" position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="login.password"></ion-input>
+  </ion-item>
+  
+  <ion-button class="half-half-button n1" fill="clear" expand="full" (click)="cadastrar()" routerLink="/login">Cadastrar</ion-button>
+  <ion-button class="half-half-button n1" fill="clear" expand="full" routerLink="/login">Voltar</ion-button>
+</ion-content>

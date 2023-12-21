@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pesquisar Usuários</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionChange)="search($event)" placeholder="Pesquisar por username"></ion-searchbar>
+
+  <ion-list *ngIf="searchResult.length > 0">
+    <ion-item *ngFor="let user of searchResult">
+      <ion-label>{{ user.username }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="searchResult.length === 0 && logins.length > 0">
+    <p>Nenhum resultado encontrado.</p>
+  </div>
+</ion-content>

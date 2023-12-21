@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <!-- ... (restante do código) -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let login of logins">
+
+      <ion-label>ID: {{ login.id }}</ion-label>
+      <ion-label>Username: {{ login.username }}</ion-label>
+      <ion-label>Tipo: {{ login.adm}}</ion-label>
+      <ion-label>Password: {{ login.password }}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="editarLogin(login)">Editar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="loginEdit">
+    <ion-item>
+      <ion-label position='floating'>Nome de Usuário</ion-label>
+      <ion-input type='text' [(ngModel)]="loginEdit.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Adm</ion-label>
+      <ion-input type='text' [(ngModel)]="loginEdit.adm"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Senha</ion-label>
+      <ion-input type='password' [(ngModel)]="loginEdit.password"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="salvarEdicao()">Salvar</ion-button>
+    <ion-button expand="full" (click)="cancelar()">Cancelar</ion-button>
+  </ion-list>
+</ion-content>

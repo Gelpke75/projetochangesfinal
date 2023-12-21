@@ -1,0 +1,14 @@
+*{
+    --ion-background-color: black;
+}
+    ion-label {
+    background-color: black;
+}
+
+.buttons.edit{
+    background: linear-gradient(-345deg, #006cff 35%, #ff9300 65%);
+    border: none;
+    color: white;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+}

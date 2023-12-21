@@ -1,0 +1,62 @@
+<ion-app>
+  <ion-router-outlet  id="main-content"></ion-router-outlet>
+
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerLink]="'/home'">
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <!-- Adicione outros itens do menu com seus respectivos links aqui -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-tabs *ngIf="showTabs">
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button tab="home" routerLink="/home">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </ion-tab-button>
+
+      <ion-tab-button tab="search" routerLink="/pesquisar">
+        <ion-icon name="search"></ion-icon>
+        Pesquisar
+      </ion-tab-button>
+
+        <ion-tab-button tab="store" routerLink="/loja">
+        <ion-icon name="bag-handle"></ion-icon>
+        Loja
+      </ion-tab-button>
+
+      <ion-tab-button tab="settings" routerLink="/configuracao">
+        <ion-icon name="settings"></ion-icon>
+        Configurações
+      </ion-tab-button>
+      
+      <ion-tab-button tab="profile">
+        <ion-icon name="person"></ion-icon>
+        Perfil
+      </ion-tab-button>
+      <!-- Outras abas -->
+    </ion-tab-bar>
+  </ion-tabs>
+
+
+ 
+  
+  
+
+
+
+</ion-app>
+

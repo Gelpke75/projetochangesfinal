@@ -1,0 +1,57 @@
+* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ion-content {
+    // Caminho para a imagem no seu projeto. Modifique conforme necessário.
+    background: url('../../../assets/c_login.png') no-repeat center center fixed;
+    background-size: cover;
+    background-position-y: top;
+  }
+
+  .um{
+    background-color: transparent;
+    margin-top: 60%;
+    width: 90%;
+    margin-left: 3%;
+  }
+
+  .dois{
+    background-color: transparent;
+    width: 90%;
+    margin-left: 3%;
+  }
+
+  .loginsenha {
+    background-color: transparent;
+  }
+  
+  .half-half-button {
+    background: linear-gradient(-223deg, #006cff 35%, #ff9300 65%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    width: 86%;
+    margin-left: 7%;
+  }
+
+  .half-half-button.n1 {
+    margin-top: 5%;
+  }
+
+  .half-half-button.n2 {
+    margin-top: 3%;
+  }
+
+  .top-image {
+    position: absolute;
+    top: 20px; /* Ajuste a posição conforme necessário */
+    left: 0px; /* Ajuste a posição conforme necessário */
+    z-index: 2; /* Z-index maior para a imagem de cima */
+  }
+  

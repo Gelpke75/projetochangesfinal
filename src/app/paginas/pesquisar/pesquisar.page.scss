@@ -1,0 +1,48 @@
+ion-header,
+ion-content {
+  --ion-background-color: black; /* Define o fundo preto */
+  color: white; /* Define o texto branco */
+  display: flex; /* Ativa o modelo de layout flexbox */
+  flex-direction: column; /* Coloca os itens em coluna */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+
+}
+
+ion-toolbar {
+    width: 100%;
+ 
+  --ion-color-base: white; /* Define a cor do título como branco */
+}
+
+ion-title {
+  
+  text-align: center; /* Centraliza o título horizontalmente */
+  align-self: center; /* Centraliza o título horizontalmente */
+
+}
+
+ion-searchbar {
+
+  --ion-color-base: rgb(0, 0, 0); /* Define a cor do texto da barra de pesquisa como branco */
+  margin: 20px auto; /* Margem para centralizar a barra de pesquisa */
+}
+
+ion-list {
+  width: 80%; /* Define a largura da lista */
+  margin: 0 auto; /* Centraliza a lista */
+}
+
+ion-item {
+  background-color: black; /* Fundo preto para os itens */
+
+}
+
+ion-label {
+  color: white; /* Define a cor do texto dentro dos itens como branco */
+  text-align: center;
+  
+}
+
+div {
+  text-align: center; /* Centraliza o texto 'Nenhum resultado encontrado' */
+}
