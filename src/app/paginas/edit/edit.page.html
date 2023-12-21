@@ -1,5 +1,10 @@
 <ion-header [translucent]="true">
-  <!-- ... (restante do código) -->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Editar Usuário</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -9,29 +14,33 @@
       <ion-label id="idame">ID: {{ login.id }}</ion-label>
       <ion-label>Username: {{ login.username }}</ion-label>
       <ion-label [ngClass]="getAdmClass(login.adm)">Adm: {{ login.adm }}</ion-label>
-      <ion-label id="idazul">Password: {{ login.password }}</ion-label>
+      <ion-label id="idazul">Password: {{ maskPassword(login.password) }}</ion-label>
+
       <ion-buttons slot="end">
         <ion-button (click)="editarLogin(login)">Editar</ion-button>
       </ion-buttons>
     </ion-item>
   </ion-list>
-
-  <ion-list *ngIf="loginEdit">
+  
+  <ion-list id="listEdit" *ngIf="loginEdit">
     <ion-item>
       <ion-label position='floating'>Nome de Usuário</ion-label>
       <ion-input type='text' [(ngModel)]="loginEdit.username"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position='floating'>Adm</ion-label>
-      <ion-input type='text' [(ngModel)]="loginEdit.adm"></ion-input>
+      <ion-label>Admin</ion-label>
+      <ion-checkbox [(ngModel)]="loginEdit.adm"></ion-checkbox>
     </ion-item>
+    
     <ion-item>
       <ion-label position='floating'>Senha</ion-label>
       <ion-input type='password' [(ngModel)]="loginEdit.password"></ion-input>
     </ion-item>
-    <ion-button expand="full" (click)="salvarEdicao()">Salvar</ion-button>
+    <ion-button   class="half-half-button edit" fill="clear" expand="full" (click)="salvarEdicao()">Salvar</ion-button>
 
- <ion-button id="half-half-button" expand="full" (click)="excluirLogin(loginEdit)">Deletar</ion-button>
-    <ion-button expand="full" (click)="cancelar()">Cancelar</ion-button>
+ <ion-button  class="half-half-button edit delete" fill="clear" expand="full" (click)="excluirLogin(loginEdit)">Deletar</ion-button>
+    <ion-button  class="half-half-button edit" fill="clear" expand="full" (click)="cancelar()">Cancelar</ion-button>
   </ion-list>
+
+  <ion-button class="half-half-button edit back" fill="clear" expand="full" routerLink="/administartor">Voltar</ion-button>
 </ion-content>

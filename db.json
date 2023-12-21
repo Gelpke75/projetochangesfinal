@@ -68,33 +68,15 @@
     },
     {
       "username": "petizn",
-      "adm": false,
+      "adm": true,
       "password": "1234",
       "id": 25
     },
     {
-      "username": "alo",
-      "adm": false,
-      "password": "1234",
-      "id": 26
-    },
-    {
-      "username": "bebezao",
-      "adm": "false",
-      "password": "123",
-      "id": 27
-    },
-    {
-      "username": "narutinho",
-      "adm": "false",
+      "username": "narutinhao",
+      "adm": "true",
       "password": "123",
       "id": 28
-    },
-    {
-      "username": "braba",
-      "adm": "false",
-      "password": "111",
-      "id": 30
     }
   ],
   "posts": [

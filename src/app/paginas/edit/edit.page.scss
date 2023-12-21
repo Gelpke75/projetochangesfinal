@@ -1,17 +1,18 @@
-*{
-    --ion-background-color: black;
-}
-    ion-label {
-    background-color: black;
-     
+
+ion-label {
+    color: white;
 }
 
-.buttons.edit{
-    background: linear-gradient(-345deg, #006cff 35%, #ff9300 65%);
-    border: none;
-    color: white;
-    border-bottom-left-radius: 30%;
-    border-top-right-radius: 30%;
+
+ion-content {
+    --ion-background-color: black;
+}
+
+ion-checkbox {
+    background-color: white;
+    border-radius: 50%;
+    padding: 2.1px;
+    --checkbox-background-checked: linear-gradient(-245deg, #006cff 35%, #ff9300 65%);
 }
 
 #idame{
@@ -30,4 +31,27 @@
     color: red; /* Define a cor vermelha para 'false' */
   }
 
- 
+  .half-half-button {
+    background: linear-gradient(-223deg, #006cff 35%, #ff9300 65%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    width: 86%;
+    margin-left: 7%;
+  }
+
+  .half-half-button.edit {
+    margin-top: 2%;
+  }
+  
+  .half-half-button.back {
+    background: linear-gradient(-223deg, #ff9300 35%, #006cff 65%);
+  }
+
+  .half-half-button.delete {
+    background: linear-gradient(-223deg, #ff0000 35%, #ff5858 65%); /* Vermelho */
+}

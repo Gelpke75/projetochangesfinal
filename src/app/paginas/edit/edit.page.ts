@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ElementRef } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { NavController } from '@ionic/angular'; // Importe NavController
 
@@ -18,11 +18,20 @@ export class EditPage implements OnInit {
   loginEdit: any = null;
   
 
-  constructor(private apiService: ApiService, private navCtrl: NavController) {}
+  constructor(private apiService: ApiService, private navCtrl: NavController,private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.carregarLogins(); // Chame a função para carregar os logins ao inicializar a página
   }
+
+// Supondo que login seja um objeto com uma propriedade "password"
+// Esta função retorna uma string mascarada para a senha
+maskPassword(password: string): string {
+  return '*'.repeat(password.length);
+}
+
+
+
 
   getAllLogins() {
     this.apiService.getAllLogins().subscribe(
@@ -67,6 +76,7 @@ export class EditPage implements OnInit {
       () => {
         console.log(`Login com ID ${login.id} excluído com sucesso`);
         this.carregarLogins(); // Atualize a lista após a exclusão
+        this.cancelar();
       },
       (error) => {
         console.error('Erro ao excluir login:', error);
@@ -77,6 +87,8 @@ export class EditPage implements OnInit {
   editarLogin(login: any) {
     this.loginEdit = { ...login };
     console.log(this.loginEdit);
+    const element = this.elementRef.nativeElement.querySelector('#listEdit');
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   cancelar() {
