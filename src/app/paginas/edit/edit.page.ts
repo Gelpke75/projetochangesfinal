@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { NavController } from '@ionic/angular'; // Importe NavController
+
+interface Login {
+  id: number;
+  // Outras propriedades do login...
+}
+
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.page.html',
@@ -10,13 +16,13 @@ export class EditPage implements OnInit {
   logins: any[] = [];
   login: any[] = [];
   loginEdit: any = null;
+  adm:any;
 
-  constructor(private apiService: ApiService,private navCtrl: NavController) {}
+  constructor(private apiService: ApiService, private navCtrl: NavController) {}
 
   ngOnInit() {
     this.carregarLogins(); // Chame a função para carregar os logins ao inicializar a página
   }
-  
 
   getAllLogins() {
     this.apiService.getAllLogins().subscribe(
@@ -43,7 +49,6 @@ export class EditPage implements OnInit {
   ionViewWillEnter() {
     this.carregarLogins();
   }
-    
 
   updateLogin(loginId: number, newData: any) {
     this.apiService.updateLogin(loginId, newData).subscribe(
@@ -57,14 +62,14 @@ export class EditPage implements OnInit {
     );
   }
 
-  deleteLogin(loginId: number) {
-    this.apiService.deleteLogin(loginId).subscribe(
-      (response) => {
-        console.log('Login deletado com sucesso!', response);
-        this.getAllLogins(); // Atualiza a lista após deletar
+  excluirLogin(login: Login) {
+    this.apiService.excluirLogin(login.id).subscribe(
+      () => {
+        console.log(`Login com ID ${login.id} excluído com sucesso`);
+        this.carregarLogins(); // Atualize a lista após a exclusão
       },
       (error) => {
-        console.error('Erro ao deletar o login:', error);
+        console.error('Erro ao excluir login:', error);
       }
     );
   }
@@ -89,5 +94,13 @@ export class EditPage implements OnInit {
         console.error('Erro ao atualizar login:', error);
       }
     );
+  }
+
+  getAdmClass(adm: boolean | string) {
+    if (typeof adm === 'boolean') {
+      return adm ? 'isTrue' : 'isFalse';
+    } else {
+      return adm === 'true' ? 'isTrue' : 'isFalse';
+    }
   }
 }

@@ -79,16 +79,22 @@
       "id": 26
     },
     {
-      "username": "bebe",
-      "adm": false,
+      "username": "bebezao",
+      "adm": "false",
       "password": "123",
       "id": 27
     },
     {
-      "username": "narutouzukraq",
+      "username": "narutinho",
       "adm": "false",
       "password": "123",
       "id": 28
+    },
+    {
+      "username": "braba",
+      "adm": true,
+      "password": "111",
+      "id": 30
     }
   ]
 }

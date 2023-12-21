@@ -3,6 +3,7 @@
 }
     ion-label {
     background-color: black;
+     
 }
 
 .buttons.edit{
@@ -12,3 +13,21 @@
     border-bottom-left-radius: 30%;
     border-top-right-radius: 30%;
 }
+
+#idame{
+    color: #ff9300;
+}
+
+#idazul{
+    color: rgb(48, 98, 190);
+}
+
+.isTrue {
+    color: green; /* Define a cor verde para 'true' */
+  }
+  
+  .isFalse {
+    color: red; /* Define a cor vermelha para 'false' */
+  }
+
+ 
