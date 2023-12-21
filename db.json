@@ -92,7 +92,7 @@
     },
     {
       "username": "braba",
-      "adm": true,
+      "adm": "false",
       "password": "111",
       "id": 30
     }
@@ -116,6 +116,5 @@
       "descricao": "Descrição do Post 3",
       "imagemUrl": "link_para_imagem_3.jpg"
     }
-   
   ]
 }

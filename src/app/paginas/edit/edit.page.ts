@@ -16,7 +16,7 @@ export class EditPage implements OnInit {
   logins: any[] = [];
   login: any[] = [];
   loginEdit: any = null;
-  adm:any;
+  
 
   constructor(private apiService: ApiService, private navCtrl: NavController) {}
 
