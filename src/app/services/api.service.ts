@@ -87,6 +87,14 @@ getPosts(): Observable<any[]> {
   return this.http.get<any[]>(`${this.Url}/posts`);
 }
 
+
+
+
+getLoginPorUsername(username: string): Observable<any> {
+  return this.http.get<any[]>(`${this.Url}/login?username=${username}`);
+}
+
+
 }
   
   

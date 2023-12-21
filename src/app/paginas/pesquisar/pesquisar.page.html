@@ -1,19 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Pesquisar Usuários</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-searchbar (ionChange)="search($event)" placeholder="Pesquisar por username"></ion-searchbar>
-
-  <ion-list *ngIf="searchResult.length > 0">
-    <ion-item *ngFor="let user of searchResult">
-      <ion-label>{{ user.username }}</ion-label>
+<ion-content [fullscreen]="true" class="content">
+  <div class="container">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
     </ion-item>
-  </ion-list>
 
-  <div *ngIf="searchResult.length === 0 && logins.length > 0">
-    <p>Nenhum resultado encontrado.</p>
+    <ion-button expand="full" (click)="buscarLoginPorUsername()" class="button">Buscar por Username</ion-button>
+
+    <ion-card *ngIf="login" class="card">
+      <ion-card-header>
+        Informações do Login
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>ID: {{ login.id }}</ion-label><br>
+        <ion-label>Usuário: {{ login.username }}</ion-label>
+        <!-- Outras informações do login -->
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

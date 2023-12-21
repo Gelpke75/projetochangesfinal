@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-interface User {
-  id: number;
-  username: string;
-  password: string;
-  posts: any[];
-}
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-pesquisar',
@@ -13,43 +7,19 @@ interface User {
   styleUrls: ['./pesquisar.page.scss'],
 })
 export class PesquisarPage {
-  logins: User[] = [];
-  searchResult: User[] = [];
+  login: any;
+  username: string = '';
 
-  constructor() {
-    this.loadUsers();
-  }
+  constructor(private apiService: ApiService) {}
 
-  loadUsers() {
-    // Simulação de carga de dados localmente
-    this.logins = [
-      {
-        id: 1,
-        username: 'admin',
-        password: '123456',
-        posts: [],
+  buscarLoginPorUsername() {
+    this.apiService.getLoginPorUsername(this.username).subscribe(
+      (response) => {
+        this.login = response[0]; // Supondo que retorne um único usuário
       },
-      {
-        id: 2,
-        username: 'bb',
-        password: '111',
-        posts: [],
-      },
-      // Outros usuários...
-    ];
-
-    this.searchResult = this.logins;
-  }
-
-  search(event: any) {
-    const searchTerm: string = event.target.value.toLowerCase();
-
-    if (!searchTerm || searchTerm === '') {
-      this.searchResult = this.logins;
-    } else {
-      this.searchResult = this.logins.filter((user: User) =>
-        user.username.toLowerCase().includes(searchTerm)
-      );
-    }
+      (error) => {
+        console.error('Erro ao buscar login por username:', error);
+      }
+    );
   }
 }

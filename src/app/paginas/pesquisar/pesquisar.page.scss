@@ -1,48 +1,40 @@
-ion-header,
-ion-content {
-  --ion-background-color: black; /* Define o fundo preto */
-  color: white; /* Define o texto branco */
-  display: flex; /* Ativa o modelo de layout flexbox */
-  flex-direction: column; /* Coloca os itens em coluna */
-  align-items: flex-start; /* Alinha os itens à esquerda */
-
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  --ion-background-color: black;
+  color: white;
 }
 
 ion-toolbar {
-    width: 100%;
- 
-  --ion-color-base: white; /* Define a cor do título como branco */
+  width: 100%;
+  --ion-color-base: white;
 }
 
 ion-title {
-  
-  text-align: center; /* Centraliza o título horizontalmente */
-  align-self: center; /* Centraliza o título horizontalmente */
-
+  text-align: center;
 }
 
 ion-searchbar {
-
-  --ion-color-base: rgb(0, 0, 0); /* Define a cor do texto da barra de pesquisa como branco */
-  margin: 20px auto; /* Margem para centralizar a barra de pesquisa */
+  --ion-color-base: rgb(0, 0, 0);
+  margin: 20px auto;
 }
 
 ion-list {
-  width: 80%; /* Define a largura da lista */
-  margin: 0 auto; /* Centraliza a lista */
+  width: 80%;
+  margin: 0 auto;
 }
 
 ion-item {
-  background-color: black; /* Fundo preto para os itens */
-
+  background-color: black;
 }
 
 ion-label {
-  color: white; /* Define a cor do texto dentro dos itens como branco */
+  color: white;
   text-align: center;
-  
 }
 
 div {
-  text-align: center; /* Centraliza o texto 'Nenhum resultado encontrado' */
+  text-align: center;
 }
